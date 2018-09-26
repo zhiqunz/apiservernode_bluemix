@@ -2,21 +2,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: get-started-node
+  name: apiServerNode
   labels:
-    app: get-started-node
+    app: apiServerNode
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: get-started-node
+      app: apiServerNode
   template:
     metadata:
       labels:
-        app: get-started-node
+        app: apiServerNode
     spec:
       containers:
-      - name: get-started-node
+      - name: apiServerNode
         image: <REGISTRY>/<NAMESPACE>/myapp:v1.0.0
         ports:
         - containerPort: 8080

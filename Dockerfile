@@ -1,4 +1,4 @@
-FROM node:6-alpine
+FROM node:10-alpine
 
 ADD views /app/views
 ADD package.json /app
